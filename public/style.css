@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.camera-cont{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(207, 196, 157);
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.action-cont{
+    width: 8rem;
+    height: 20rem;
+    position: absolute;
+    top: calc((100vh - 20rem)/2);
+    right: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(8, 18, 112);
+    font-size: 20px;
+    z-index: 2;
+}
+
+.action-cont > * {
+
+    height: 8rem;
+    width: 100%;
+    /* background-color: cornflowerblue; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.record-btn{
+    background-color: red;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.capture-btn{
+    background-color: white;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+
+.scale-capture{
+    animation-name: scale-record;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+
+.timer-cont{
+    position: absolute;
+    bottom: 16rem;
+    left: 8rem;
+    color: aqua;
+}
+
+.timer{
+    display: none ;
+}
+
+.filter-cont{
+    position: absolute;
+    top: calc((100vh - 30rem)/2);
+    left: 7rem;
+    height: 24rem;
+    width: 10rem;
+    z-index: 2;
+    background-color: aqua;
+}
+
+.filter{
+    height: 6rem;
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.brown{
+    background-color: #a52a2a4a;
+}
+
+.yellow{
+    background-color: #ffff0047;
+}
+
+.orange{
+    background-color: rgba(255, 166, 0, 0.281);
+}
+
+.transparent{
+    background-color: transparent;
+}
+
+.filter-layer{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-blend-mode: color-burn;
+    /* background-color: #ffff0047; */
+    z-index: 1;
+}
+
+.gallery{
+    position: absolute;
+    color: rgb(207, 13, 13);
+    font-size: 3rem;
+    bottom: 10rem;
+    right: 10rem;
+    z-index: 3;
+}
+
+.gallery:hover{
+    cursor: pointer;
+}
